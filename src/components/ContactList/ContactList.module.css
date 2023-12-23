@@ -1,0 +1,20 @@
+.contactName{
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.contactNumber{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.contactDelete{
+    background-color: aquamarine;
+}
+
+.listContscts{
+    margin: 0 auto;
+    width: 600px;
+}

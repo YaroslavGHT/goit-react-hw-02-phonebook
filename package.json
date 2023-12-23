@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://YaroslavGHT.github.io/goit-react-hw-02-phonebook/",
   "dependencies": {
+    "nanoid": "^5.0.4",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
