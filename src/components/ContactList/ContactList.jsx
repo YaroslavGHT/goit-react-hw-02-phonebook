@@ -1,12 +1,9 @@
-import { FilteredProfiles } from '../FilteredProfile/FilteredProfile.jsx'
 import css from './ContactList.module.css';
 
 const ContactList = ({
-    filter,
-    contacts,
+    filteredProfiles,
     handleDeleteContact
     }) => {
-    const filteredProfiles = FilteredProfiles({ contacts, filter });
     return (
         <ul className={css.listContscts}>
           {filteredProfiles.length > 0 && filteredProfiles.map(contact => 

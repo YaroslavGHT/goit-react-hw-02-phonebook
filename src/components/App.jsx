@@ -42,7 +42,7 @@ export class App extends Component {
 
   handleAddProfile = newContact => {
     const checkDuplication = this.state.contacts.some(
-      contact => contact.name === newContact.name
+      contact => contact.name.toLowerCase() === newContact.name.toLowerCase()
     );
     if (checkDuplication) {
       alert(`${newContact.name} is alredy in contscts`);
@@ -55,7 +55,11 @@ export class App extends Component {
     });
   };
 
-  render() {
+  render() { 
+    const filteredProfiles = this.state.contacts.filter(contact =>
+          contact.name.toLowerCase().includes(this.state.filter.trim().toLowerCase())
+    );
+
     return (
       <div>
         <h2>Phonebook</h2>
@@ -68,8 +72,7 @@ export class App extends Component {
           value={this.state.filter}
         />
         <ContactList
-          contacts={this.state.contacts}
-          filter={this.state.filter}
+          filteredProfiles={filteredProfiles}
           handleDeleteContact={this.handleDeleteContact}
         />
       </div>

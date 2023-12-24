@@ -1,7 +1,7 @@
 const Filter = ({
     handleChangeFilter,
     value
-}) => {
+    }) => {
     return (
     <>
         <h3>Find contacts by name</h3>
